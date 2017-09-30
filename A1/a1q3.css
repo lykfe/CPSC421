@@ -1,0 +1,19 @@
+body {
+  width: 900px;
+  margin: 0 auto;
+padding-top: 10px;
+}
+
+.stateContainer, .form-group {
+  width: 80%;
+}
+
+.col {
+  border: 1px solid black;
+  height: 50px;
+  text-align: center;
+}
+
+.computeButton {
+  margin-bottom: 10px;
+}

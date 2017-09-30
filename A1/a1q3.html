@@ -1,0 +1,78 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="a1q3.css">
+  <body>
+    <div class="form-group">
+      <label for="initialState">Initial State:</label>
+      <input type="text" class="form-control" id="initialState" placeholder="In format of (column,row) w/o brackets or Empty">
+      <br>
+      <label for="actionSequence">Actions:</label>
+      <input type="text" class="form-control" id="actionSequence" aria-describedby="actionHelp" placeholder="In format of (a1,a2,a3,a4) w/o brackets">
+      <small id="obsHelp" class="form-text text-muted">0: top, 1: right, 2: down, 3: left</small>
+      <br>
+      <label for="obsSequence">Observations:</label>
+      <input type="text" class="form-control" id="obsSequence" aria-describedby="obsHelp" placeholder="In format of (e1,e2,e3,e4) w/o brackets">
+      <small id="obsHelp" class="form-text text-muted">end: -1</small>
+    </div>
+    <hr>
+    <button type="button" class="btn btn-primary computeButton" onclick='compute()'>Compute!</button>
+    <br>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Iteration
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      </div>
+    </div>
+    <hr>
+    <div class="stateContainer">
+      <div class="row">
+        <div class="col" id="02">
+          s_13
+        </div>
+        <div class="col" id="12">
+          s_23
+        </div>
+        <div class="col" id="22">
+          s_33
+        </div>
+        <div class="col" id="32">
+          s_43
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="01">
+          s_12
+        </div>
+        <div class="col" id="11" style="background-color: #616168">
+        </div>
+        <div class="col" id="21">
+          s_32
+        </div>
+        <div class="col" id="31">
+          s_42
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="00">
+          s_11
+        </div>
+        <div class="col" id="10">
+          s_21
+        </div>
+        <div class="col" id="20">
+          s_31
+        </div>
+        <div class="col" id="30">
+          s_41
+        </div>
+      </div>
+    </div>
+    <div id="error">error </div>
+    <div id="explanation"> explanation </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="a1q3.js"></script>
+</html>
